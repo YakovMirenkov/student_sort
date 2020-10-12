@@ -1,5 +1,5 @@
-#ifndef STUDENT_ARRAY
-#define STUDENT_ARRAY
+#ifndef STUDENT_ARRAY_H
+#define STUDENT_ARRAY_H
 
 #include "../student.h"
 
