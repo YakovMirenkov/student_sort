@@ -1,8 +1,6 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <cstdio>
-
 class student
 {
 private:
