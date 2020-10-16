@@ -85,18 +85,11 @@ student &student::operator=(student &&x)
 int student::operator>(const student &x) const
 {
 	int namecmp = strcmp(name, x.name);
-	int valcmp;
 
-	if( namecmp>0 )
-		return namecmp;
-	if( namecmp<0 )
-		return 0;
+	if( namecmp==0 )
+		return value>x.value;
 
-	valcmp = value - x.value;
-	if( valcmp>0 )
-		return valcmp;
-
-	return 0;
+	return namecmp>0;
 }
 
 void student::swap(student &x)
