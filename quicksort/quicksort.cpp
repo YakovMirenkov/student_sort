@@ -3,18 +3,20 @@
 void quicksort(student *a, int n)
 {
 	int i, j;
+	student tmp;
 
 	while( n>1 )
 	{
 		i = 0;
 		j = n - 1;
-		while( i<j )
+		tmp = static_cast<const student &&>(a[n/2]);
+		while( 1 )
 		{
-			while( a[n/2]>a[i] )
+			while( tmp>a[i] )
 				i++;
-			while( a[j]>a[n/2] )
+			while( a[j]>tmp )
 				j--;
-			// Найдено первое a[i]>=a[n/2] и последнее a[j]<=a[n/2]
+			// Найден первый a[i]>=a[n/2] и последний a[j]<=a[n/2]
 
 			if( i>=j )
 				break;
@@ -34,4 +36,6 @@ void quicksort(student *a, int n)
 			n = i;
 		}
 	}
+
+	tmp = {nullptr, };
 }
