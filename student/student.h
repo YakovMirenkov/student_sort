@@ -26,6 +26,7 @@ public:
 	student(student &&x);
 	~student();
 	student &operator=(const student &x);
+	student &operator=(const student &&x);
 	student &operator=(student &&x);
 	int operator>(const student &x) const;
 	void swap(student &x);

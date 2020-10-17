@@ -74,6 +74,13 @@ student &student::operator=(const student &x)
 	return *this;
 }
 
+student &student::operator=(const student &&x)
+{
+	name = x.name;
+	value = x.value;
+	return *this;
+}
+
 student &student::operator=(student &&x)
 {
 	name = x.name;
